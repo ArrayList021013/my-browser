@@ -1,0 +1,31 @@
+{
+  "name": "my-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/src/main/index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build && tsc",
+    "ts-build": "tsc",
+    "electron": "tsc && electron .",
+    "dev": "vite build && tsc && electron ."
+  },
+  "keywords": [],
+  "author": "lxh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "dmg-builder": "24.13.3",
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3",
+    "electron-builder-squirrel-windows": "24.13.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
