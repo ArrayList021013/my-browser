@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import alias from '@rollup/plugin-alias';
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react(),
+        alias({
+            entries: [
+                {find: '~', replacement: resolve(__dirname, 'src')}
+            ]
+        })
+    ],
     // root: './',
     base: './', //基础路径
     build: {
@@ -20,12 +28,6 @@ export default defineConfig({
                 assetFileNames: 'assets/[name]-[hash].[ext]'
             },
             external: ['electron']
-        }
-    },
-    resolve: {
-        alias: {
-            //设置 @ 符号以便全局引入文件
-            '@': resolve(__dirname, 'src')
         }
     }
 });
