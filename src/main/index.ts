@@ -7,10 +7,13 @@ function createWindow() {
         height: 600,
         webPreferences: {
             preload: path.resolve(__dirname, '../preloads/preload.js'),
+            nodeIntegration: true,
+            contextIsolation: false,
         }
     });
 
     mainWindow.loadFile(path.resolve(__dirname, '../../index.html'));
+    mainWindow.webContents.openDevTools();
 };
 
 app.on('ready', createWindow);

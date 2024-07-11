@@ -1,5 +1,6 @@
 import { contextBridge } from 'electron';
 
+/*
 window.addEventListener("DOMContentLoaded", () => {
     const replaceText = (selector: string, text: string) => {
         const element = document.getElementById(selector);
@@ -12,9 +13,10 @@ window.addEventListener("DOMContentLoaded", () => {
         replaceText(`${dependency}-version`, (process.versions as any)[dependency]);
     }
 });
+*/
 
-contextBridge.exposeInMainWorld('versions', {
-    node: () => process.versions.node,
-    chrome: () => process.versions.chrome,
-    electron: () => process.versions.electron
-});
+// contextBridge.exposeInMainWorld('versions', {
+//     node: () => process.versions.node,
+//     chrome: () => process.versions.chrome,
+//     electron: () => process.versions.electron
+// });
