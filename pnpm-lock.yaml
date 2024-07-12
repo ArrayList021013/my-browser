@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@electron/remote':
+        specifier: ^2.1.2
+        version: 2.1.2(electron@31.2.0)
       '@rollup/plugin-alias':
         specifier: ^5.1.0
         version: 5.1.0(rollup@4.18.1)
+      mobx:
+        specifier: ^6.13.0
+        version: 6.13.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -179,6 +185,11 @@ packages:
     resolution: {integrity: sha512-k9ZzUQtamSoweGQDV2jILiRIHUu7lYlJ3c6IEmjv1hC17rclE+eb9U+f6UFlOOETo0JzY1HNlXy4YOlCvl+Lww==}
     engines: {node: '>=12.0.0'}
     hasBin: true
+
+  '@electron/remote@2.1.2':
+    resolution: {integrity: sha512-EPwNx+nhdrTBxyCqXt/pftoQg/ybtWDW3DUWHafejvnB1ZGGfMpv6e15D8KeempocjXe78T7WreyGGb3mlZxdA==}
+    peerDependencies:
+      electron: '>= 13.0.0'
 
   '@electron/universal@1.5.1':
     resolution: {integrity: sha512-kbgXxyEauPJiQQUNG2VgUeyfQNFk6hBF11ISN2PNI6agUgPl55pv4eQmaqHzTAzchBvqZ2tQuRVaPStGf0mxGw==}
@@ -1221,6 +1232,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  mobx@6.13.0:
+    resolution: {integrity: sha512-1laWODrBWmB7mDJ8EClCjUQTyLwJ0ydJgE4FtK7t9r3JnjXgc9OhmYs2P4RtHrY1co5+4T6cKP2UswX2SU29mA==}
+
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
@@ -1803,6 +1817,10 @@ snapshots:
       plist: 3.1.0
     transitivePeerDependencies:
       - supports-color
+
+  '@electron/remote@2.1.2(electron@31.2.0)':
+    dependencies:
+      electron: 31.2.0
 
   '@electron/universal@1.5.1':
     dependencies:
@@ -2902,6 +2920,8 @@ snapshots:
       yallist: 4.0.0
 
   mkdirp@1.0.4: {}
+
+  mobx@6.13.0: {}
 
   ms@2.1.2: {}
 

@@ -7,5 +7,8 @@ export interface Versions {
 declare global {
     interface Window {
         versions: Versions;
+        electronAPI: {
+            getUserDataPath: () => Promise<string>;
+        };
     }
 }

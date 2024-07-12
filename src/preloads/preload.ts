@@ -1,4 +1,8 @@
-import { contextBridge } from 'electron';
+import { contextBridge, ipcRenderer } from 'electron';
+
+contextBridge.exposeInMainWorld('electronAPI', {
+    getAppPath: () => ipcRenderer.invoke('get-app-path')
+});
 
 /*
 window.addEventListener("DOMContentLoaded", () => {
